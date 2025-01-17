@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ilovepdf/ilovepdf-nodejs": "^0.3.0",
     "@next/font": "13.1.6",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
@@ -23,8 +24,13 @@
     "react-toastify": "^11.0.2"
   },
   "devDependencies": {
+    "@types/node": "22.10.7",
+    "@types/react": "19.0.7",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.6"
+  },
+  "resolutions": {
+    "postcss": "8.4.21"
   }
 }
