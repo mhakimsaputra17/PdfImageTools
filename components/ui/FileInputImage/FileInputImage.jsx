@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';  // Add this import
 import { FileImage, UploadCloud, X, FileOutput, Download, AlertCircle, Plus, SortAsc, ArrowLeft } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -255,10 +256,13 @@ const FileInputImage = () => {
                                                 {files.map((file, idx) => (
                                                     <div key={idx} className="relative group">
                                                         <div className="aspect-[3/4] rounded-lg overflow-hidden bg-gray-800/50">
-                                                            <img
+                                                            <Image
                                                                 src={URL.createObjectURL(file)}
                                                                 alt={file.name}
+                                                                width={300}
+                                                                height={400}
                                                                 className="w-full h-full object-cover"
+                                                                unoptimized  // Add this since we're using object URLs
                                                             />
                                                         </div>
                                                         <div className="absolute top-2 right-2">
